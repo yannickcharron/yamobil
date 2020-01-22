@@ -1,0 +1,22 @@
+#cc_name {
+    width: 275px;
+}
+#cc_cvc {
+    width: 100px;
+}
+#cc_number {
+    background-image: url(../../img/ccvalidator.png);
+    background-position: 2px -121px;
+    background-size: 120px 361px;
+    background-repeat: no-repeat;
+    padding-left: 54px;
+    width: 275px;
+}
+
+#btnDebugStripe {
+    margin-left: 5px;
+}
+
+#dialog {
+    display:none;
+}

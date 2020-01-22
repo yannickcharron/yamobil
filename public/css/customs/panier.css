@@ -1,0 +1,10 @@
+#btnCheckout {
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+}
+
+#content #checkout .table tbody tr td input, #content #basket .table tbody tr td input, #content #customer-order .table tbody tr td input .qtePanier {
+    width: 65px;
+    text-align: left;
+}

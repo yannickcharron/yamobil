@@ -1,0 +1,28 @@
+h3 {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.mobile {
+    display: block;
+    max-width: 85%;
+    margin: 0 auto;
+    margin-top : 15px;
+}
+
+#dialog {
+    display:none;
+}
+
+.infoMobile h4 {    
+    margin-top: 20px;
+    margin-left: 15px;
+    
+}
+
+.infoMobile ul {    
+    padding-left: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+    
+}

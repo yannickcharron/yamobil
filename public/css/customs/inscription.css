@@ -1,0 +1,28 @@
+.inscription {
+    width: 80%;
+    margin: auto;
+}
+
+.inscription .control-label:after { 
+    content:" *";
+    font-size: 12pt;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color:#4FBFA8;
+}
+
+.inscription .has-error .control-label:after { 
+    content:" *";
+    font-size: 12pt;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color:#A94442;
+}
+
+.recaptcha {
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.g-recaptcha {
+        display: inline-block;
+}
