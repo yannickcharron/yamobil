@@ -1,7 +1,76 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CatalogueController!{% endblock %}
-
 {% block body %}
+	<div id="content">
+		<div class="container">
+			<div class="row bar">
+                <p class="text-muted lead">In our Ladies department we offer wide selection of the best products we have found and carefully selected worldwide. Pellentesque habitant morbi tristique senectus et netuss.</p>
+				{% if produits is defined %}
+					<div class="row products products-big">
+						{% if produits | length == 0 %}
+							<div class="col-md-12">
+								<div class="box">
+									<p class="lead">Aucun produit ne correspond à vos critères de sélection.</p>
+								</div>
+							</div>
+						{% else %}
+							{% for produit in produits %}
+								<div class="col-lg-4 col-md-6">
+									<div class="product">
+										<div class="flip-container">
+											<div class="flipper">
+												<div
+													class="front">{# <a href="{{ path('produit.popup', {'idProduit':produit.IdProduit}) }}" class="btnPopup">
+																									<img src="{{ asset('img/produits/' ~ produit.IdProduit ~ '.png','img/produits/nd.png') }}" alt="" class="mobile"> */}}
+																								</a> #}
+												</div>
+												<div class="back infoMobile">
+													{{ produit.DescriptionCourte | raw }}
+												</div>
+											</div>
+										</div>
+										{# <a href="{{ path('produit.popup', {'idProduit':produit.IdProduit}) }}" class="invisible btnPopup">
+																		<img src="{{ asset('img/produits/' ~ produit.IdProduit ~ '.png','img/produits/nd.png') }}" alt="" class="mobile">
+																	</a> #}
+										<div class="text">
+											<h3>
+												{# <a class="btnPopup" href="{{ path('produit.popup', {'idProduit':produit.IdProduit}) }}">{{ produit.Nom }}</a> #}
+											</h3>
+											<p class="price">{{ produit.Prix | number_format(2, ",", " ") }}$</p>
+											<p
+												class="buttons">{# <a href="{{ path('produit.popup', { 'idProduit':produit.IdProduit }) }}" class="btn btn-default btnPopup">Voir les détails</a>
+																						<a href="{{ path('panier.ajout', {'idProduit':produit.IdProduit}) }}" class="btn btn-primary">
+																							<i class="fa fa-shopping-cart"></i>
+																						</a> #}
+											</p>
+										</div>
+										<!-- /.text -->
 
+									<!-- <div class="ribbon sale">
+															                                                <div class="theribbon">SALE</div>
+															                                                <div class="ribbon-background"></div>
+															                                            </div> -->
+										<!-- /.ribbon -->
+
+										<!-- <div class="ribbon new">
+																	                                                <div class="theribbon">NEW</div>
+																	                                                <div class="ribbon-background"></div>
+																	                                            </div> -->
+										<!-- /.ribbon -->
+
+										<!-- <div class="ribbon gift">
+																	                                                <div class="theribbon">GIFT</div>
+																	                                                <div class="ribbon-background"></div>
+																	                                            </div> -->
+										<!-- /.ribbon -->
+									</div>
+									<!-- /.product -->
+								</div>
+							{% endfor %}
+						{% endif %}
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
 {% endblock %}

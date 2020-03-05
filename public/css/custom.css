@@ -1,7 +1,8 @@
-/** Your theme modifications here **/
-.modal-backdrop.in {
-    z-index:-1;
+/* your styles go here */
+footer.main-footer {
+    padding: 0;
 }
 
-
-   
+footer.main-footer .copyrights {
+    padding: 25px 0;
+}
